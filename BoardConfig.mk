@@ -28,7 +28,7 @@
 -include device/htc/msm8960-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := ville
+TARGET_BOOTLOADER_BOARD_NAME := valentewx
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80400000
@@ -36,8 +36,8 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
 
-TARGET_PREBUILT_KERNEL := device/htc/ville/prebuilt/kernel
-TARGET_KERNEL_CONFIG := ville_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960-valentewx
+TARGET_KERNEL_CONFIG := cyanogen_valentewx_defconfig
 
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
@@ -48,7 +48,7 @@ TARGET_SCREEN_WIDTH := 540
 
 # QCOM GPS
 #BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
-#BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := ville
+#BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := valentewx
 
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
@@ -62,13 +62,13 @@ WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
 #mmcblk0p23: 000ffa00 00000200 "misc"
 #mmcblk0p22: 00fffe00 00000200 "recovery"
 #mmcblk0p21: 01000000 00000200 "boot"
-#mmcblk0p33: 67fffc00 00000200 "system"
+#mmcblk0p36: 47fffc00 00000200 "system"
 #mmcblk0p30: 00140200 00000200 "local"
-#mmcblk0p34: 0ffffe00 00000200 "cache"
-#mmcblk0p35: 97fffe00 00000200 "userdata"
+#mmcblk0p37: 0dfffe00 00000200 "cache"
+#mmcblk0p38: 89fffe00 00000200 "userdata"
 #mmcblk0p26: 01400000 00000200 "devlog"
 #mmcblk0p28: 00040000 00000200 "pdata"
-#mmcblk0p36: 27be00000 00000200 "fat"
+#mmcblk0p39: 27be00000 00000200 "fat"
 #mmcblk0p31: 00010000 00000200 "extra"
 #mmcblk0p17: 02d00000 00000200 "radio"
 #mmcblk0p18: 00a00000 00000200 "adsp"
@@ -77,15 +77,17 @@ WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
 #mmcblk0p20: 007ffa00 00000200 "radio_config"
 #mmcblk0p24: 00400000 00000200 "modem_st1"
 #mmcblk0p25: 00400000 00000200 "modem_st2"
+#mmcblk0p34: 01ffec00 00000200 "wimax"
+#mmcblk0p32: 007ffa00 00000200 "udata_wimax"
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1744829440
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 2550136320
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1207958528
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 2315255296
 BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_VOLD_MAX_PARTITIONS := 36
+BOARD_VOLD_MAX_PARTITIONS := 39
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
