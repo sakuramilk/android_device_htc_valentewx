@@ -6,4 +6,4 @@
 /data		ext4		/dev/block/mmcblk0p38
 /sdcard		vfat		/dev/block/mmcblk0p39
 /system		ext4		/dev/block/mmcblk0p36
-
+/external_sd		auto		/dev/block/mmcblk1p1 /dev/block/mmcblk1

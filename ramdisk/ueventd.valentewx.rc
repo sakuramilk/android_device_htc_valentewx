@@ -101,7 +101,7 @@
 /dev/msm_a2dp_in          0640  system       audio
 /dev/msm_amrnb_in         0640  system       audio
 
-# for ville sensors
+# for valentewx sensors
 /dev/akm8975_aot          0640  compass      system
 /dev/akm8975_daemon       0640  compass      system
 /dev/bma150               0640  compass      system
